@@ -8,6 +8,7 @@ include("luxlamp")
 include("rushlight")
 include("eggburner")
 include("smoke")
+--include("sparks")
 --include("luxfly")
 --include("")
 

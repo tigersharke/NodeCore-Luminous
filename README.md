@@ -22,4 +22,4 @@ Far superior to the old "nc_light" in the following ways:
  	- Uses Eggcorns For Fuel
  	- Dim Light, Long Duration
  	- Goes Out Faster When Carried
-# ~LET THERE BE LIGHT~
+# LET THERE BE LIGHT
