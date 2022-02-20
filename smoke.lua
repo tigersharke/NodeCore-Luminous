@@ -38,7 +38,7 @@ nodecore.register_abm({
 		label = "particles:incense",
 		interval = 10,
 		chance = 1,
-		nodenames = {modname.. ":incense_lit"},
+		nodenames = {modname.. ":incense_stone_lit", modname.. ":incense_sandstone_lit", modname.. ":incense_coalstone_lit", modname.. ":incense_adobe_lit"},
 		action = function(pos)
 			local above = {x = pos.x, y = pos.y + 1, z = pos.z}
 			local abnod = minetest.get_node(above)
