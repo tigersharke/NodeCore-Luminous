@@ -207,7 +207,7 @@ nodecore.register_craft({
 	})
 ------------CRAFT INCENSE------------
 nodecore.register_craft({
-	label = "chisel adobe eggburner",
+	label = "chisel eggburner_adobe",
 	action = "pummel",
 	duration = 2,
 	toolgroups = {thumpy = 3},
