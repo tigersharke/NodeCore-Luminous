@@ -31,7 +31,7 @@ local flame = {
 -------------------------------------------------------------------------------
 ----------EMPTY LANTERN----------
 minetest.register_node(modname .. ":lantern_empty", {
-	description = "Lantern",
+	description = "Coal Lantern",
 		tiles = {
 		"nc_lode_annealed.png",
 		"nc_lode_annealed.png",
@@ -91,7 +91,7 @@ local aburn = burn == 0 and "empty" or burn
 local light = fuel + 6
 ----------------------------------------
 minetest.register_node(modname .. ":lantern_" .. fuel, {
-	description = "Lantern",
+	description = "Coal Lantern",
 		tiles = {
 		"nc_lode_annealed.png",
 		"nc_lode_annealed.png",
@@ -136,7 +136,7 @@ minetest.register_node(modname .. ":lantern_" .. fuel, {
 ----------------------------------------
 -----------FUELED LANTERN LIT-----------
 minetest.register_node(modname .. ":lantern_lit_" .. fuel, {
-	description = "Lantern",
+	description = "Coal Lantern",
 	tiles = {
 		"nc_lode_annealed.png",
 		"nc_lode_annealed.png",
@@ -195,7 +195,7 @@ nodecore.register_abm({
 		chance = 1,
 		nodenames = {modname .. ":lantern_lit_" .. fuel},
 		action = function(pos)
-			nodecore.sound_play(modname .. "_hissy", {gain = 0.4, pos = pos})
+			nodecore.sound_play("nc_fire_ignite", {gain = 0.4, pos = pos})
 			return minetest.set_node(pos, {name = modname .. ":lantern_" .. aburns})
 		end
 	})
@@ -229,7 +229,7 @@ nodecore.register_aism({
 				chance = 1,
 				itemnames = {modname .. ":lantern_lit_" .. fuel},
 				action = function(stack, data)
-						minetest.sound_play(modname .. "_hissy", {gain = 0.4, pos = data.pos})
+						minetest.sound_play("nc_fire_ignite", {gain = 0.4, pos = data.pos})
 						stack:set_name(modname .. ":lantern_" .. aburns)
 						return stack
 				end
