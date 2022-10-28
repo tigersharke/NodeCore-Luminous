@@ -46,25 +46,11 @@ minetest.register_node(modname .. ":luxlamp_" .. id, {
 	sounds = nodecore.sounds("nc_optics_glassy"),
 })
 ---------------------------------------
------------Luxlamp Crafting------------
-nodecore.register_craft({
-		label = "assemble luxlamp",
-		action = "stackapply",
-		indexkeys = {"nc_lode:form"},
-		wield = {name = "nc_optics:prism"},
-		consumewield = 1,
-		nodes = {
-			{match = "nc_lode:form", replace = "air"},
-			{y = 1, match = "nc_optics:lens", replace = "air"},
-			{y = -1, match = "nc_lode:block_annealed", replace = modname .. ":luxlamp_0"},
-		}
-	})
----------------------------------------
 -----------Luxlamp Recycling-----------
 nodecore.register_craft({
 		label = "break luxlamp apart",
 		action = "pummel",
-		toolgroups = {choppy = 5},
+		toolgroups = {choppy = 1, thumpy = 1, cracky = 1},
 		nodes = {
 			{
 				match = {groups = {luxlamp = true}},
@@ -72,10 +58,10 @@ nodecore.register_craft({
 			}
 		},
 		items = {
-			{name = "nc_lode:rod_tempered", count = 4, scatter = flux},
-			{name = "nc_lux:flux_flowing", count = flux, scatter = flux}
+			{name = "nc_lode:rod_tempered", count = 4, scatter = 4},
+			{name = "nc_lux:flux_flowing", count = 10, scatter = 4}
 		},
-		itemscatter = flux
+		itemscatter = 4
 	})
 
 ---------------------------------------
@@ -109,36 +95,7 @@ nodecore.register_aism({
 		end
 	})
 
----------------------------------------
------------Luxlamp Charging------------
-nodecore.register_abm({
-		label = "Luxlamp Effulgence",
-		nodenames = {"group:luxlamp"},
-		neighbors = {"nc_lux:flux_source", "nc_lux:flux_flowing"},
-		interval = time,
-		chance = 1,
-		action = function(pos)
-				nodecore.set_node(pos, {name = modname .. ":luxlamp_5"})
-		end
-	})
-	
---nodecore.register_abm({
---		label = "Luxlamp Charging",
---		nodenames = {"group:luxlamp"},
---		neighbors = {"nc_lux:flux_source", "nc_lux:flux_flowing"},
---		interval = 2,	--temporary, as a mysterious bug causes serious issue with this value
---		chance = 1,
---		action = function(pos)
---			if power > 4 then
---				nodecore.set_node(pos, {name = modname .. ":luxlamp_" .. flux})
---				elseif 4 then return false
---			end
---		end
---	})
-	
----------------------------------------
-
----------------------------------------
+----------------------------------------
 end
 luxlamp("Dull",		"0",	0,	1)
 luxlamp("Dim",			"1",	1,	4)
