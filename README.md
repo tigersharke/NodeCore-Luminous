@@ -9,10 +9,8 @@ Far superior to the old "nc_light" in the following ways:
 	- Recipe Cost Has Been Buffed
 	- Occasionally Drops Ashes While Lit
  - Luxlamp
-	- New Recipe
-	- New Model
-	- Rebalanced Functionality
-	- Properly Charges (Hopefully)
+	- Being phased out by vanilla lantern.
+	- Now Fragile and Uncraftable
  - Rushlight
  	- Cheap Light Source
  	- Doesn't Require Charcoal
