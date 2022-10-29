@@ -23,4 +23,9 @@ Far superior to the old "nc_light" in the following ways:
  - Sparks from tempered lode
  - Aeterna Jar
  	- Dependant on wc_naturae
+ - Pumlamp
+ 	- NodeCore lavalamp
+ 	- Cools to pumice if contacts water
+ 	- Cools to pumice slowly over time unless adjacent to pumwater
+ 	- Fueled by pumwater
 # LET THERE BE LIGHT
