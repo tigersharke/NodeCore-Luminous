@@ -35,7 +35,7 @@ nodecore.register_craft({
 		nodes = {
 			{match = {groups = {lode_temper_annealed = true}}}
 		},
-		consumewield = 1,
+--		consumewield = 1,
 		duration = 5,
 		before = function(pos, data)
 			local w = data.wield and ItemStack(data.wield):get_name() or ""
@@ -65,7 +65,7 @@ nodecore.register_craft({
 
 			local r = math_random(1, 4)
 			if r > fs then
-				nodecore.s(pos, 1, 5 + fs - r)
+--				nodecore.s(pos, 1, 5 + fs - r)
 				nodecore.sound_play("nc_api_toolbreak", {pos = pos, gain = 1})
 				return
 			end

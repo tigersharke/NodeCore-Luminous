@@ -14,8 +14,12 @@ include("eggburner_stone")
 include("eggburner_sandstone")
 include("eggburner_tarstone")
 --------------------------------------
+if minetest.get_modpath("wc_naturae") then
+	include("aeterna_jar")
+end
+--------------------------------------
 include("smoke")
---include("sparks")
+include("sparks")
 --include("")
 --------------------------------------
 include("conversion")

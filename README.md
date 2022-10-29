@@ -20,4 +20,7 @@ Far superior to the old "nc_light" in the following ways:
  	- Uses Eggcorns For Fuel
  	- Dim Light, Long Duration
  	- Goes Out Faster When Carried
+ - Sparks from tempered lode
+ - Aeterna Jar
+ 	- Dependant on wc_naturae
 # LET THERE BE LIGHT
