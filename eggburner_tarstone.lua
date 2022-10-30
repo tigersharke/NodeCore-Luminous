@@ -223,7 +223,7 @@ nodecore.register_craft({
 		},
 		{
 			y = -1,
-			match = "nc_concrete:terrain_coalstone_boxy",
+			match = "nc_concrete:concrete_coalstone_boxy",
 			replace = modname .. ":incense_coalstone_empty"
 		}
 	}
