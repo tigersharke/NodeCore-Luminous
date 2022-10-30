@@ -23,6 +23,7 @@ Far superior to the old "nc_light" in the following ways:
  - Sparks from tempered lode
  - Aeterna Jar
  	- Dependant on wc_naturae
+ 	- A jar full of brightly glowing mushrooms
  - Pumlamp
  	- NodeCore lavalamp
  	- Cools to pumice if contacts water
