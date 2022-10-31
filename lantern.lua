@@ -69,7 +69,7 @@ minetest.register_node(modname .. ":lantern_empty", {
 ----------------------------------------
 ------------Lantern Crafting------------
 nodecore.register_craft({
-		label = "assemble lantern",
+		label = "assemble coal lantern",
 		action = "stackapply",
 		indexkeys = {"nc_lode:form"},
 		wield = {name = "nc_optics:glass"},
