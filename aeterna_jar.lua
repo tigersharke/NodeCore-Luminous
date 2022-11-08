@@ -4,15 +4,11 @@ local minetest, nodecore
 -- LUALOCALS > ---------------------------------------------------------
 local modname = minetest.get_current_modname()
 ------------------------------------------------------------------------
-
 local glass = "nc_optics_glass_edges.png^(nc_tree_tree_side.png^[mask:nc_optics_tank_mask.png)"
-
 local fungus = "wc_naturae_mycelium.png"
-
 local glow = "nc_lux_base.png^[colorize:springgreen:150"
-
 local final =  "(" ..glow.. ")^(" ..fungus.. ")^(" ..glass.. ")"
-
+-----Node---------------------------------------------------------------
 minetest.register_node(modname .. ":jar", {
 		description = "Aeterna Jar",
 		drawtype = "normal",
@@ -25,10 +21,10 @@ minetest.register_node(modname .. ":jar", {
 			scaling_time = 50
 		},
 		paramtype = "light",
-		light_source = 3,
+		light_source = 4,
 		sounds = nodecore.sounds("nc_optics_glassy"),
 	})
-----------------------------------------
+-----Craft--------------------------------------------------------------
 nodecore.register_craft({
 		label = "assemble jar",
 		action = "stackapply",
@@ -42,5 +38,7 @@ nodecore.register_craft({
 			},
 		}
 	})
-----------------------------------------
+-----Growth-------------------------------------------------------------------
+
+-----Death-------------------------------------------------------------------
 

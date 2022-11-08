@@ -29,12 +29,13 @@ minetest.register_alias("nc_light:lantern_lit_8",				modname .. ":lantern_lit_8"
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
 minetest.register_alias("nc_light:luxlamp_0",				modname .. ":luxlamp_0")
-minetest.register_alias("nc_light:luxlamp_1",				modname .. ":luxlamp_1")
-minetest.register_alias("nc_light:luxlamp_2",				modname .. ":luxlamp_2")
-minetest.register_alias("nc_light:luxlamp_3",				modname .. ":luxlamp_3")
-minetest.register_alias("nc_light:luxlamp_4",				modname .. ":luxlamp_4")
-minetest.register_alias("nc_light:luxlamp_5",				modname .. ":luxlamp_5")
+minetest.register_alias("nc_light:luxlamp_1",				modname .. ":luxlamp_0")
+minetest.register_alias("nc_light:luxlamp_2",				modname .. ":luxlamp_0")
+minetest.register_alias("nc_light:luxlamp_3",				modname .. ":luxlamp_0")
+minetest.register_alias("nc_light:luxlamp_4",				modname .. ":luxlamp_0")
+minetest.register_alias("nc_light:luxlamp_5",				modname .. ":luxlamp_0")
 ---------------------------------------------------------------------------------------------------
+minetest.register_alias(modname .. ":luxlamp_5",				modname .. ":luxlamp_0")
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
 minetest.register_alias(modname .. ":incense_empty",			modname .. ":incense_stone_empty")
