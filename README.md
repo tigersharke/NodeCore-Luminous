@@ -20,7 +20,10 @@ Far superior to the old "nc_light" in the following ways:
  	- Uses Eggcorns For Fuel
  	- Dim Light, Long Duration
  	- Goes Out Faster When Carried
- - Sparks from tempered lode
+ - Flint & Steel
+	- Forget About MC Flint & Steel
+ 	- Stone Chip & Lode Bar/Rod
+ 	- Consumes Stone Chip
  - Aeterna Jar
  	- Dependant on wc_naturae
  	- A jar full of brightly glowing mushrooms

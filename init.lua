@@ -23,6 +23,7 @@ end
 --------------------------------------
 include("smoke")
 include("sparks")
+--include("pumice")
 --include("")
 --------------------------------------
 include("conversion")
