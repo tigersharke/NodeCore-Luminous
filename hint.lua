@@ -16,7 +16,10 @@ nodecore.register_hint("chisel etched concrete into an eggburner",
 	"chisel eggburner_adobe",
 	"chisel adobe eggburner",
 	"chisel eggburner_sandstone",
-	"chisel eggburner_coalstone"
+	"chisel eggburner_coalstone",
+	"chisel eggburner_cloudstone",
+	"chisel eggburner_shellstone",
+	"chisel eggburner_ceramic"
 	}
 )
 ------------------------------------------------------------------------

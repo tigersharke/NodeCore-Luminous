@@ -5,11 +5,11 @@ local ItemStack, math, minetest, nodecore, pairs, setmetatable, vector
 local modname = minetest.get_current_modname()
 -------------------------------------------------------------------------------
 local base = "nc_terrain_stone.png^[colorize:#000000:160"
-local boxy = "nc_concrete_pattern_boxy.png^[opacity:50"
-local horzy = "nc_concrete_pattern_horzy.png^[opacity:50"
+local boxy = "nc_concrete_pattern_boxy.png^[opacity:40"
+local horzy = "nc_concrete_pattern_horzy.png^[opacity:40"
 local pit = "(nc_fire_coal_4.png^[mask:" ..modname.. "_mask_pit.png)^[opacity:75"
 local egg = "[combine:24x24:4,4=nc_tree_eggcorn.png\\^[resize\\:8x8"
-local ember = "(nc_fire_coal_4.png^nc_fire_ember_3.png^[opacity:150)^[mask:" ..modname.. "_mask_pit.png"
+local ember = "(nc_fire_coal_4.png^(nc_fire_ember_3.png^[opacity:150))^[mask:" ..modname.. "_mask_pit.png"
 local ash = "nc_fire_ash.png^[mask:" ..modname.. "_mask_pit.png"
 -------------------------------------------------------------------------------
 local rfcall = function(pos, data)
@@ -30,9 +30,9 @@ local function burner(id, light, tile)
 			type = "fixed",
 			fixed = {
 				{-0.25, -0.5, -0.25, 0.25, -0.4375, 0.25},			-- Bowl_1
-				{-0.375, -0.4375, -0.375, 0.375, -0.375, 0.375},		-- Bowl_2
+				{-0.375, -0.4375, -0.375, 0.375, -0.375, 0.375},	-- Bowl_2
 				{-0.4375, -0.375, -0.4375, 0.4375, -0.25, 0.4375},	-- Bowl_3
-				{-0.5, -0.25, -0.5, 0.5, 0, 0.5},					-- Bowl_4
+				{-0.5, -0.25, -0.5, 0.5, 0, 0.5},				-- Bowl_4
 				{-0.4375, 0, -0.4375, 0.4375, 0.0625, 0.4375},		-- Bowl_5
 				{-0.375, 0.0625, -0.375, 0.375, 0.125, 0.375},		-- Bowl_6
 			}
@@ -43,8 +43,7 @@ local function burner(id, light, tile)
 			stack_as_node = 1,
 			snappy = 1,
 			incense = 1,
-			incense_coalstone = 1,
-			totable = 1
+			incense_coalstone = 1
 		},
 		stack_max = 1,
 		sounds = nodecore.sounds("nc_terrain_stony")

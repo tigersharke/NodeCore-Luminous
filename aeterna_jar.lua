@@ -24,6 +24,7 @@ local final =  "(" ..glow.. ")^(" ..fungus.. ")^(" ..glass.. ")"
 			snappy = 1,
 			lux_emit = emit,
 			stack_as_node = 1,
+			totable = 1
 		},
 		stack_max = 1,
 		light_source = charge,

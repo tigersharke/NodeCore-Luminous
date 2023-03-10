@@ -9,7 +9,7 @@ local boxy = "nc_concrete_pattern_boxy.png^[opacity:50"
 local horzy = "nc_concrete_pattern_horzy.png^[opacity:50"
 local pit = "(nc_fire_coal_4.png^[mask:" ..modname.. "_mask_pit.png)^[opacity:75"
 local egg = "[combine:24x24:4,4=nc_tree_eggcorn.png\\^[resize\\:8x8"
-local ember = "(nc_fire_coal_4.png^nc_fire_ember_3.png^[opacity:150)^[mask:" ..modname.. "_mask_pit.png"
+local ember = "(nc_fire_coal_4.png^(nc_fire_ember_3.png^[opacity:150))^[mask:" ..modname.. "_mask_pit.png"
 local ash = "nc_fire_ash.png^[mask:" ..modname.. "_mask_pit.png"
 -------------------------------------------------------------------------------
 local rfcall = function(pos, data)
@@ -43,8 +43,7 @@ local function burner(id, light, tile)
 			stack_as_node = 1,
 			snappy = 1,
 			incense = 1,
-			incense_sandstone = 1,
-			totable = 1
+			incense_sandstone = 1
 		},
 		stack_max = 1,
 		sounds = nodecore.sounds("nc_terrain_stony")

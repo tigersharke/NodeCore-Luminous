@@ -178,12 +178,12 @@ nodecore.register_aism({
 })
 nodecore.register_aism({
 	label = "Accidental Catastrophe",
-	interval = 60,
+	interval = 120,
 	chance = 20,
 	itemnames = {modname.. ":lavalamp_hot"},
 	action = function(stack, data)
-		nodecore.item_eject(data.pos,"nc_terrain:lava_flowing",math_random(1, 6),math_random(4, 8))
-		nodecore.item_eject(data.pos,"nc_igneous:pumice",math_random(1, 6),math_random(0, 4))
+		nodecore.item_eject(data.pos,"nc_terrain:lava_flowing", math_random(1, 6), math_random(4, 8))
+		nodecore.item_eject(data.pos,"nc_igneous:pumice", math_random(1, 6), math_random(1, 4))
 		return "nc_fire:ember"..math_random(1, 8)
 	end
 })

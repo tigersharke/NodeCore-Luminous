@@ -4,7 +4,7 @@ local ItemStack, math, minetest, nodecore, pairs, setmetatable, vector
 -- LUALOCALS > ---------------------------------------------------------
 local modname = minetest.get_current_modname()
 -------------------------------------------------------------------------------
-local base = "nc_terrain_stone.png"
+local base = "wc_pottery_ceramic.png"
 local boxy = "nc_concrete_pattern_boxy.png^[opacity:50"
 local horzy = "nc_concrete_pattern_horzy.png^[opacity:50"
 local pit = "(nc_fire_coal_4.png^[mask:" ..modname.. "_mask_pit.png)^[opacity:75"
@@ -21,8 +21,8 @@ end
 -------------------------------------------------------------------------------
 ----------------INCENSE-----------------
 local function burner(id, light, tile)
-	minetest.register_node(modname .. ":incense_stone_" ..id, {
-		description = " Stone Egg Burner",
+	minetest.register_node(modname .. ":incense_ceramic_" ..id, {
+		description = "Ceramic Egg Burner",
 		tiles = tile,
 		drawtype = "nodebox",
 		paramtype = "light",
@@ -43,10 +43,10 @@ local function burner(id, light, tile)
 			stack_as_node = 1,
 			snappy = 1,
 			incense = 1,
-			incense_stone = 1
+			incense_ceramic = 1
 		},
 		stack_max = 1,
-		sounds = nodecore.sounds("nc_terrain_stony")
+		sounds = nodecore.sounds("nc_optics_glassy")
 	})
 end
 -------------------------------------------------------------------------------
@@ -80,36 +80,36 @@ burner("ashy",		0,
 )
 ----------------IGNITION-----------------
 minetest.register_abm({
-		label = "ignite eggburner_stone",
+		label = "ignite ceramic eggburner",
 		interval = 10,
 		chance = 2,
-		nodenames = {modname.. ":incense_stone_unlit"},
+		nodenames = {modname.. ":incense_ceramic_unlit"},
 		neighbors = {"group:igniter", "group:torch_lit", "group:candle_lit"},
 --		action_delay = true,
 		action = function(pos)
 			if not nodecore.quenched(pos) then
-			minetest.set_node(pos, {name = modname.. ":incense_stone_lit"})
+			minetest.set_node(pos, {name = modname.. ":incense_ceramic_lit"})
 			end
 		end
 	})
 ----------------QUENCHING-----------------
 nodecore.register_abm({
-		label = "Incense_stone Quenching",
+		label = "Incense ceramic Quenching",
 		interval = 0.1,
 		chance = 1,
-		nodenames = {modname .. ":incense_stone_lit"},
+		nodenames = {modname .. ":incense_ceramic_lit"},
 		action = function(pos)
 			if nodecore.quenched(pos) then
 				nodecore.sound_play("nc_fire_snuff", {gain = 1, pos = pos})
-				return minetest.set_node(pos, {name = modname.. ":incense_stone_ashy"})
+				return minetest.set_node(pos, {name = modname.. ":incense_ceramic_ashy"})
 			end
 		end
 	})
 nodecore.register_aism({
-				label = "Held Incense_stone Quenching",
+				label = "Held ceramic Incense Quenching",
 				interval = 0.1,
 				chance = 1,
-				itemnames = {modname .. ":incense_stone_lit"},
+				itemnames = {modname .. ":incense_ceramic_lit"},
 				action = function(stack, data)
 						local pos = data.pos
 						local player = data.player
@@ -122,50 +122,50 @@ nodecore.register_aism({
 
 						if ext and nodecore.quenched(pos, data.node and 1 or 0.3) then
 							nodecore.sound_play("nc_fire_snuff", {gain = 1, pos = pos})
-							stack:set_name(modname .. ":incense_stone_ashy")
+							stack:set_name(modname .. ":incense_ceramic_ashy")
 							return stack
 						end
 				end
 })
 ------------BURNING UP------------
 nodecore.register_abm({
-		label = "Incense_stone Use",
+		label = "ceramic Incense Use",
 		interval = 900,
 		chance = 1,
-		nodenames = {modname .. ":incense_lit"},
+		nodenames = {modname .. ":incense_ceramic_lit"},
 		action = function(pos)
-			return minetest.set_node(pos, {name = modname .. ":incense_stone_ashy"})
+			return minetest.set_node(pos, {name = modname .. ":incense_ceramic_ashy"})
 		end
 	})
 nodecore.register_aism({
-				label = "Held Incense_stone Use",
+				label = "Held ceramic Incense Use",
 				interval = 90,
 				chance = 10,
-				itemnames = {modname .. ":incense_stone_lit"},
+				itemnames = {modname .. ":incense_ceramic_lit"},
 				action = function(stack, data)
-						stack:set_name(modname .. ":incense_stone_ashy")
+						stack:set_name(modname .. ":incense_ceramic_ashy")
 						return stack
 				end
 		})
 ------------REFILL BURNER------------
 nodecore.register_craft({
-		label = "refill eggburner_stone",
+		label = "refill ceramic eggburner",
 		action = "pummel",
 		wield = {name = "nc_tree:eggcorn"},
 		after = rfcall,
 		nodes = {
-				{match = modname .. ":incense_stone_empty", replace = modname .. ":incense_stone_unlit"}
+				{match = modname .. ":incense_ceramic_empty", replace = modname .. ":incense_ceramic_unlit"}
 			}
 	})
 ------------ASH DUMPING------------
 nodecore.register_craft({
-		label = "empty incense_stone",
+		label = "empty ceramic incense",
 		action = "pummel",
 		duration = 1,
 		nodes = {
 			{
-				match = modname.. ":incense_stone_ashy",
-				replace = modname.. ":incense_stone_empty"
+				match = modname.. ":incense_ceramic_ashy",
+				replace = modname.. ":incense_ceramic_empty"
 			}
 		},
 		items = {
@@ -174,12 +174,12 @@ nodecore.register_craft({
 	})
 ------------EGG DUMPING------------
 nodecore.register_craft({
-		label = "remove incense_stone",
+		label = "remove incense ceramic",
 		action = "pummel",
 		nodes = {
 			{
-				match = modname.. ":incense_stone_unlit",
-				replace = modname.. ":incense_stone_empty"
+				match = modname.. ":incense_ceramic_unlit",
+				replace = modname.. ":incense_ceramic_empty"
 			}
 		},
 		items = {
@@ -188,25 +188,25 @@ nodecore.register_craft({
 	})
 ------------Break Burner-----------
 nodecore.register_craft({
-		label = "break incense_stone apart",
+		label = "break ceramic incense apart",
 		action = "pummel",
 		duration = 2,
 		toolgroups = {thumpy = 3, cracky = 3, choppy = 3},
 		nodes = {
 			{
-				match = {groups = {incense = true}},
-				replace = "nc_terrain:gravel"
+				match = {groups = {incense_ceramic = true}},
+				replace = "nc_terrain:dirt"
 			}
 		},
 		items = {
-			{name = "nc_stonework:chip", count = 3, scatter = 2},
+--			{name = "nc_stonework:chip", count = 3, scatter = 2},
 			{name = "nc_fire:lump_ash", count = 1, scatter = 2},
 		},
 		itemscatter = 2
 	})
 ------------CRAFT INCENSE------------
 nodecore.register_craft({
-	label = "chisel eggburner_stone",
+	label = "chisel eggburner_ceramic",
 	action = "pummel",
 	duration = 2,
 	toolgroups = {thumpy = 3},
@@ -222,16 +222,16 @@ nodecore.register_craft({
 		},
 		{
 			y = -1,
-			match = "nc_concrete:terrain_stone_boxy",
-			replace = modname .. ":incense_stone_empty"
+			match = "nc_concrete:wc_pottery_ceramic_boxy",
+			replace = modname .. ":incense_ceramic_empty"
 		}
 	}
 })
 ----------------------------------------
 ------------Incense Ambiance------------
 nodecore.register_ambiance({
-		label = "Incense_stone Ambiance",
-		nodenames = {modname.. ":incense_stone_lit"},
+		label = "Incense ceramic Ambiance",
+		nodenames = {modname.. ":incense_ceramic_lit"},
 		interval = 1,
 		chance = 2,
 		sound_name = "nc_fire_flamy",

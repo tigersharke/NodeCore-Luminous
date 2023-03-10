@@ -25,11 +25,12 @@ Far superior to the old "nc_light" in the following ways:
  	- Stone Chip & Lode Bar/Rod
  	- Consumes Stone Chip
  - Aeterna Jar
- 	- Dependant on wc_naturae
  	- A jar full of brightly glowing mushrooms
+ 	- Dependant on wc_naturae
  - Pumlamp
  	- NodeCore lavalamp
  	- Cools to pumice if contacts water
  	- Cools to pumice slowly over time unless adjacent to pumwater
  	- Fueled by pumwater
+	- Dependant on wc_naturae
 # LET THERE BE LIGHT
