@@ -35,13 +35,13 @@ nodecore.register_hint("assemble a luxbulb from lode cube, form and two shaped g
 ------------------------------------------------------------------------
 nodecore.register_hint("connect luxbulb to power node to illuminate it",
 	"Illuminate Bulb",
-	"group:bulb"
+	"group:bulb",
 	{"place:wc_luminous:luxlamp_0",
 	"look:wc_luminous:luxlamp_1"}
 )
 ------------------------------------------------------------------------
 nodecore.register_hint("illuminate a bulb to its maximum",
 	"group:luxlamp",
-	"group:lux_cobble_max"
+	"group:lux_cobble_max",
 	{"place:wc_luminous:luxlamp_0",
 	"look:wc_luminous:luxlamp_3"}
