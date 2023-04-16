@@ -45,3 +45,4 @@ nodecore.register_hint("illuminate a bulb to its maximum",
 	"group:lux_cobble_max",
 	{"place:wc_luminous:luxlamp_0",
 	"look:wc_luminous:luxlamp_3"}
+)
