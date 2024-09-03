@@ -42,6 +42,7 @@ minetest.register_node(modname .. ":lantern_empty", {
 	},
 	drawtype = "nodebox",
 	paramtype = "light",
+	use_texture_alpha = "blend",
 	node_box = {
 		type = "fixed",
 		fixed = {
