@@ -102,6 +102,7 @@ minetest.register_node(modname .. ":lantern_" .. fuel, {
 		"(" ..globe.. ")^(" ..plate.. ")^(" ..fslot.. ")^(" ..modname.. "_fuel_" ..fuel.. ".png)"
 	},
 	drawtype = "nodebox",
+	use_texture_alpha = "blend",
 	paramtype = "light",
 	node_box = {
 		type = "fixed",
