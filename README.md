@@ -33,4 +33,9 @@ Far superior to the old "nc_light" in the following ways:
  	- Cools to pumice slowly over time unless adjacent to pumwater
  	- Fueled by pumwater
 	- Dependant on wc_naturae
+ - Shroomite Lantern
+	- Make use of that glowing Shroomite!
+	- Semi-permanent
+	- End-game tier
+	- Dependant on wc_gloom
 # LET THERE BE LIGHT
