@@ -15,7 +15,6 @@ if minetest.get_modpath("wc_noditions") then
 	include("saplight")
 end
 --------------------------------------
-
 include("eggburner_adobe")
 include("eggburner_stone")
 include("eggburner_sandstone")
@@ -30,6 +29,10 @@ if minetest.get_modpath("wc_naturae") then
 	include("eggburner_shellstone")
 	include("aeterna_jar")
 	include("lavalamp")
+end
+--------------------------------------
+if minetest.get_modpath("wc_gloom") then
+	include("shroomite")
 end
 --------------------------------------
 include("smoke")
