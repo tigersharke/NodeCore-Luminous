@@ -35,7 +35,7 @@ minetest.register_node(modname .. ":lantern_shroomite", {
 		stack_as_node = 1,
 		falling_node = 1,
 	},
-	light_source = 10,
+	light_source = 12,
 	stack_max = 1,
 	sunlight_propagates = true,
 	sounds = nodecore.sounds("nc_lode_annealed")

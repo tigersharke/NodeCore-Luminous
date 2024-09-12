@@ -25,6 +25,10 @@ if minetest.get_modpath("wc_pottery") then
 	include("eggburner_ceramic")
 end
 --------------------------------------
+if minetest.get_modpath("wc_vulcan") then
+	include("eggburner_vulcan")
+end
+--------------------------------------
 if minetest.get_modpath("wc_naturae") then
 	include("eggburner_shellstone")
 	include("aeterna_jar")
