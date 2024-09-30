@@ -12,7 +12,7 @@ nodecore.register_craft({
 			{match = {groups = {chisel = true}}}
 		},
 		consumewield = 1,
-		duration = 2,
+		duration = 1,
 		after = function(pos)
 			return nodecore.firestick_spark_ignite(pos,true)
 		end

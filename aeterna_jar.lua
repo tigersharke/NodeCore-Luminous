@@ -10,7 +10,7 @@ local function jar(charge)
 local emit	= charge/2
 ----------------------------------------
 local glass = "nc_optics_glass_edges.png^(nc_tree_tree_side.png^[mask:nc_optics_tank_mask.png)"
-local fungus = "wc_naturae_mycelium.png"
+local fungus = "wc_fungi_mycelium.png"
 local glow = "nc_lux_base.png^[colorize:springgreen:150"
 local final =  "(" ..glow.. ")^(" ..fungus.. ")^(" ..glass.. ")"
 ----------------------------------------
@@ -39,7 +39,7 @@ nodecore.register_craft({
 		label = "assemble jar",
 		action = "stackapply",
 		indexkeys = {"nc_optics:shelf_float"},
-		wield = {name = "wc_naturae:mushroom_lux", count = 100},
+		wield = {name = "wc_fungi:mushroom_lux", count = 100},
 		consumewield = 100,
 		nodes = {
 			{
@@ -56,7 +56,7 @@ nodecore.register_craft({
 		nodes = {
 			{
 				match = {groups = {jar = true}},
-				replace = "wc_naturae:compost"
+				replace = "wc_fungi:mycelium_1"
 			}
 		},
 		items = {
