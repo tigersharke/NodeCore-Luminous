@@ -224,7 +224,7 @@ burner("ashy",		0,
 			{
 			match = {
 				lode_temper_cool = true,
-				groups = {chisel = true}
+				groups = {chisel = 1}
 				},
 			dig = true
 			},
