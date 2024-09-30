@@ -13,7 +13,7 @@ local checkdirs = {
 	{x = 0, y = 1, z = 0}
 }
 ------------------------------------------------------------------------
-nodecore.candle_life_base = 30
+nodecore.candle_life_base = 42
 ------------------------------------------------------------------------
 minetest.register_node(modname .. ":rushlight", {
 	description = "Rushlight",
