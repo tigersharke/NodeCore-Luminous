@@ -97,7 +97,8 @@ nodecore.register_craft({
 		consumewield = 1,
 		nodes = {
 			{y = 1, match = {name = "nc_optics:lens", param2 = 6}, replace = "air"},
-			{match = "nc_lode:form", replace = "air"},
-			{y = -1, match = "nc_lode:block_annealed", replace = {name = modname .. ":luxlamp_0", param2 = 1}},
+			{match = "nc_lode:form", replace = {name = modname .. ":luxlamp_0", param2 = 1}},
+--			{match = "nc_lode:form", replace = "air"},
+--			{y = -1, match = "nc_lode:block_annealed", replace = {name = modname .. ":luxlamp_0", param2 = 1}},
 		}
 	})
