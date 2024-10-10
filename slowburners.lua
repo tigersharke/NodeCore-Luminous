@@ -53,7 +53,8 @@ local function register_slowburner(material, desc, texture, sound, makefrom, bre
 			groups = {
 				stack_as_node = 1,
 				snappy = 1,
-				incense = 1
+				incense = 1,
+				falling_node = 1,
 			},
 			stack_max = 1,
 			sounds = nodecore.sounds(sound)

@@ -39,7 +39,8 @@ minetest.register_node(modname.. ":lavalamp_cool", {
 	groups = {
 		stack_as_node = 1,
 		snappy = 1,
-		pumlamp = 1
+		pumlamp = 1,
+		falling_node = 1,
 	},
 	stack_max = 1,
 	sounds = nodecore.sounds("nc_optics_glassy"),
@@ -70,7 +71,8 @@ minetest.register_node(modname.. ":lavalamp_hot", {
 		stack_as_node = 1,
 		snappy = 1,
 		igniter = 1,
-		pumlamp = 1
+		pumlamp = 1,
+		falling_node = 1,
 		},
 	stack_max = 1,
 	sounds = nodecore.sounds("nc_tree_woody"),
